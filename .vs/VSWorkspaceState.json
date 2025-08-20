@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\TaskTrackerClean.API",
+    "\\src\\TaskTrackerClean.API\\Controllers",
+    "\\src\\TaskTrackerClean.Application",
+    "\\src\\TaskTrackerClean.Domain",
+    "\\src\\TaskTrackerClean.Domain\\Interfaces",
+    "\\src\\TaskTrackerClean.Infrastructure",
+    "\\src\\TaskTrackerClean.Infrastructure\\Repositories"
+  ],
+  "PreviewInSolutionExplorer": false
+}

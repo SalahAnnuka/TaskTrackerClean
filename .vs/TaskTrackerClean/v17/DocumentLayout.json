@@ -1,0 +1,953 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.api\\controllers\\errorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|solutionrelative:src\\tasktrackerclean.api\\controllers\\errorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|solutionrelative:src\\tasktrackerclean.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\projectdtos\\briefprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\projectdtos\\briefprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\projectdtos\\createprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\projectdtos\\createprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\projectdtos\\projectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\projectdtos\\projectresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\projectdtos\\updateprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\projectdtos\\updateprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\projectdtos\\findprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\projectdtos\\findprojectdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.domain\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|solutionrelative:src\\tasktrackerclean.domain\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|solutionrelative:src\\tasktrackerclean.infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\helpers\\paginator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\helpers\\paginator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\mappers\\taskmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\mappers\\taskmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\userdtos\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\userdtos\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\taskdtos\\findtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\taskdtos\\findtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\userdtos\\userbriefresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\userdtos\\userbriefresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\userdtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\userdtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\userdtos\\finduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\userdtos\\finduserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|solutionrelative:src\\tasktrackerclean.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\interfaces\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\interfaces\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\mappers\\projectmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\mappers\\projectmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\helpers\\enumhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\helpers\\enumhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.infrastructure\\migrations\\20250819124903_updateusers_makeusernameandemailunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|solutionrelative:src\\tasktrackerclean.infrastructure\\migrations\\20250819124903_updateusers_makeusernameandemailunique.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.infrastructure\\repositories\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|solutionrelative:src\\tasktrackerclean.infrastructure\\repositories\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.api\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|solutionrelative:src\\tasktrackerclean.api\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.infrastructure\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|solutionrelative:src\\tasktrackerclean.infrastructure\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.domain\\entities\\taskentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|solutionrelative:src\\tasktrackerclean.domain\\entities\\taskentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.api\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|solutionrelative:src\\tasktrackerclean.api\\controllers\\taskscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|solutionrelative:src\\tasktrackerclean.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.domain\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|solutionrelative:src\\tasktrackerclean.domain\\entities\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.infrastructure\\repositories\\dbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|solutionrelative:src\\tasktrackerclean.infrastructure\\repositories\\dbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.domain\\interfaces\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|solutionrelative:src\\tasktrackerclean.domain\\interfaces\\iprojectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.domain\\interfaces\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|solutionrelative:src\\tasktrackerclean.domain\\interfaces\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|solutionrelative:src\\tasktrackerclean.infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|solutionrelative:src\\tasktrackerclean.domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.infrastructure\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|solutionrelative:src\\tasktrackerclean.infrastructure\\repositories\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Sedra\\AppData\\Local\\Temp\\2172e627-2def-49f9-8be5-846855d410ef_TaskTrackerFixed.zip.0ef\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\ProjectController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\userdtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\userdtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\taskdtos\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\taskdtos\\createtaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.domain\\entities\\projectentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|solutionrelative:src\\tasktrackerclean.domain\\entities\\projectentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|solutionrelative:src\\tasktrackerclean.domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\taskdtos\\updatetaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\taskdtos\\updatetaskdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\taskdtos\\taskresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\taskdtos\\taskresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\dtos\\taskdtos\\taskbriefresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\dtos\\taskdtos\\taskbriefresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.infrastructure\\tasktrackerclean.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DCF75B83-C22D-45D6-8667-6C20479CF4C2}|src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj|solutionrelative:src\\tasktrackerclean.infrastructure\\tasktrackerclean.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.domain\\enums\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|solutionrelative:src\\tasktrackerclean.domain\\enums\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.domain\\enums\\priority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AECDAB0-9F5E-40F2-B098-2F6295C10834}|src\\TaskTrackerClean.Domain\\TaskTrackerClean.Domain.csproj|solutionrelative:src\\tasktrackerclean.domain\\enums\\priority.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\security\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\security\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|solutionrelative:src\\tasktrackerclean.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.api\\tasktrackerclean.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{62BC2CF2-413A-4916-9E4A-2E6CB094E019}|src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj|solutionrelative:src\\tasktrackerclean.api\\tasktrackerclean.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|c:\\users\\sedra\\documents\\my .net projects\\tasktrackerclean\\src\\tasktrackerclean.application\\tasktrackerclean.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2B8FDCBB-D43B-4762-AF6D-25E93E04E341}|src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj|solutionrelative:src\\tasktrackerclean.application\\tasktrackerclean.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateProjectDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\CreateProjectDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\CreateProjectDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\CreateProjectDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\CreateProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:04:10.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateProjectDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\UpdateProjectDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\UpdateProjectDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\UpdateProjectDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\UpdateProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T07:12:12.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjectResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\ProjectResponseDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\ProjectResponseDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\ProjectResponseDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\ProjectResponseDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:05:02.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BriefProjectDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\BriefProjectDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\BriefProjectDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\BriefProjectDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\BriefProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:03:40.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.API\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.API\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAACHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T16:05:36.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ErrorsController.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\ErrorsController.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.API\\Controllers\\ErrorsController.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\ErrorsController.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.API\\Controllers\\ErrorsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T12:47:09.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FindProjectDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\FindProjectDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\FindProjectDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\FindProjectDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\ProjectDtos\\FindProjectDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:02:19.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Domain\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Domain\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:09:25.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Infrastructure\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Infrastructure\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwA0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:11:20.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Paginator.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Helpers\\Paginator.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Helpers\\Paginator.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Helpers\\Paginator.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Helpers\\Paginator.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T06:33:37.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Services\\ProjectService.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Services\\ProjectService.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Services\\ProjectService.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Services\\ProjectService.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAA0wAkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T09:30:58.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Services\\UserService.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Services\\UserService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAIwEAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T11:09:32.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserMapper.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Mappers\\UserMapper.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Mappers\\UserMapper.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Mappers\\UserMapper.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Mappers\\UserMapper.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T16:14:52.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T17:46:20.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TaskMapper.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Mappers\\TaskMapper.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Mappers\\TaskMapper.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Mappers\\TaskMapper.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Mappers\\TaskMapper.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAtwDoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T16:14:04.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Services\\TaskService.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Services\\TaskService.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Services\\TaskService.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Services\\TaskService.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAQwFMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T09:37:00.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\UserResponseDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\UserResponseDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\UserResponseDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\UserResponseDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwBEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:11:52.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FindTaskDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\FindTaskDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\FindTaskDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\FindTaskDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\FindTaskDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:16:14.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserBriefResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\UserBriefResponseDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\UserBriefResponseDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\UserBriefResponseDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\UserBriefResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:15:39.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UpdateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\UpdateUserDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\UpdateUserDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\UpdateUserDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\UpdateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T07:36:26.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FindUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\FindUserDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\FindUserDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\FindUserDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\FindUserDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:13:04.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Program.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Program.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.API\\Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:59:44.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IProjectService.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Interfaces\\IProjectService.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Interfaces\\IProjectService.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Interfaces\\IProjectService.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Interfaces\\IProjectService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T09:58:15.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ITaskService.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Interfaces\\ITaskService.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Interfaces\\ITaskService.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Interfaces\\ITaskService.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Interfaces\\ITaskService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T17:45:40.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ProjectMapper.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Mappers\\ProjectMapper.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Mappers\\ProjectMapper.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Mappers\\ProjectMapper.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Mappers\\ProjectMapper.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T16:13:42.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "EnumHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Helpers\\EnumHelper.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Helpers\\EnumHelper.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Helpers\\EnumHelper.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Helpers\\EnumHelper.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAAC0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T18:09:27.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20250819124903_UpdateUsers_MakeUsernameAndEmailUnique.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Migrations\\20250819124903_UpdateUsers_MakeUsernameAndEmailUnique.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Infrastructure\\Migrations\\20250819124903_UpdateUsers_MakeUsernameAndEmailUnique.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Migrations\\20250819124903_UpdateUsers_MakeUsernameAndEmailUnique.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Infrastructure\\Migrations\\20250819124903_UpdateUsers_MakeUsernameAndEmailUnique.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T12:49:53.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ProjectsController.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\ProjectsController.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.API\\Controllers\\ProjectsController.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\ProjectsController.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.API\\Controllers\\ProjectsController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAwGcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:22:12.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Repositories\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Infrastructure\\Repositories\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Repositories\\AppDbContext.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Infrastructure\\Repositories\\AppDbContext.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:59:03.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Repositories\\ProjectRepository.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Infrastructure\\Repositories\\ProjectRepository.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Repositories\\ProjectRepository.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Infrastructure\\Repositories\\ProjectRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAowBYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T12:28:31.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "TaskEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Entities\\TaskEntity.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Domain\\Entities\\TaskEntity.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Entities\\TaskEntity.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Domain\\Entities\\TaskEntity.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T13:30:55.549Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "TasksController.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\TasksController.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.API\\Controllers\\TasksController.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\TasksController.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.API\\Controllers\\TasksController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAQwE4AAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T16:03:55.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\appsettings.json",
+              "RelativeToolTip": "src\\TaskTrackerClean.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-14T08:57:59.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Entities\\UserEntity.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Domain\\Entities\\UserEntity.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Entities\\UserEntity.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Domain\\Entities\\UserEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T12:10:02.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "DbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Repositories\\DbContextFactory.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Infrastructure\\Repositories\\DbContextFactory.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Repositories\\DbContextFactory.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Infrastructure\\Repositories\\DbContextFactory.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T17:36:51.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IProjectRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Interfaces\\IProjectRepository.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Domain\\Interfaces\\IProjectRepository.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Interfaces\\IProjectRepository.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Domain\\Interfaces\\IProjectRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:11:28.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ITaskRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Interfaces\\ITaskRepository.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Domain\\Interfaces\\ITaskRepository.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Interfaces\\ITaskRepository.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Domain\\Interfaces\\ITaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:12:20.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:17:23.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Domain\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Domain\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:13:03.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Repositories\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Infrastructure\\Repositories\\TaskRepository.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\Repositories\\TaskRepository.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Infrastructure\\Repositories\\TaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T08:16:24.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\AppData\\Local\\Temp\\2172e627-2def-49f9-8be5-846855d410ef_TaskTrackerFixed.zip.0ef\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\2172e627-2def-49f9-8be5-846855d410ef_TaskTrackerFixed.zip.0ef\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\Sedra\\AppData\\Local\\Temp\\2172e627-2def-49f9-8be5-846855d410ef_TaskTrackerFixed.zip.0ef\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\ProjectController.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Local\\Temp\\2172e627-2def-49f9-8be5-846855d410ef_TaskTrackerFixed.zip.0ef\\TaskTrackerClean\\src\\TaskTrackerClean.API\\Controllers\\ProjectController.cs [Read Only]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T10:37:00.455Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\CreateUserDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\CreateUserDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\UserDtos\\CreateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:14:02.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CreateTaskDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\CreateTaskDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\CreateTaskDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\CreateTaskDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\CreateTaskDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T07:04:04.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ProjectEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Entities\\ProjectEntity.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Domain\\Entities\\ProjectEntity.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Entities\\ProjectEntity.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Domain\\Entities\\ProjectEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T14:11:17.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Domain\\Entities\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Domain\\Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T13:30:45.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "UpdateTaskDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\UpdateTaskDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\UpdateTaskDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\UpdateTaskDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\UpdateTaskDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T07:25:13.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "TaskResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\TaskResponseDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\TaskResponseDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\TaskResponseDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\TaskResponseDto.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:16:57.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "TaskBriefResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\TaskBriefResponseDto.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\TaskBriefResponseDto.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\TaskBriefResponseDto.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Dtos\\TaskDtos\\TaskBriefResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T06:09:56.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "TaskTrackerClean.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj",
+              "RelativeToolTip": "src\\TaskTrackerClean.Infrastructure\\TaskTrackerClean.Infrastructure.csproj",
+              "ViewState": "AgIAABMAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-16T12:59:51.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Status.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Enums\\Status.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Domain\\Enums\\Status.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Enums\\Status.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Domain\\Enums\\Status.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T17:48:16.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Priority.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Enums\\Priority.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Domain\\Enums\\Priority.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Domain\\Enums\\Priority.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Domain\\Enums\\Priority.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T17:48:04.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Security\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\Security\\PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\Security\\PasswordHasher.cs",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\Security\\PasswordHasher.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvx4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-16T17:36:07.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.API\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\appsettings.Development.json",
+              "RelativeToolTip": "src\\TaskTrackerClean.API\\appsettings.Development.json",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-14T08:49:28.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "TaskTrackerClean.API.csproj",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj",
+              "RelativeToolTip": "src\\TaskTrackerClean.API\\TaskTrackerClean.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-14T11:23:55.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "TaskTrackerClean.Application.csproj",
+              "DocumentMoniker": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj",
+              "RelativeDocumentMoniker": "src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj",
+              "ToolTip": "C:\\Users\\Sedra\\Documents\\My .Net Projects\\TaskTrackerClean\\src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj",
+              "RelativeToolTip": "src\\TaskTrackerClean.Application\\TaskTrackerClean.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-14T08:49:11.237Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
