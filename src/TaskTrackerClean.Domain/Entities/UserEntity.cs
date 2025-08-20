@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using TaskTrackerClean.Domain.Enums;
@@ -26,18 +25,12 @@ public class UserEntity : BaseEntity<UserEntity>
         }
     }
 
+    [NotMapped]
     public int NumberOfCompletedTasks
     {
         get
         {
-            int count = 0;
-            foreach (var item in Tasks)
-            {
-                if (item.Status == Status.COMPLETE)
-                    count++;
-            }
-
-            return count;
+            return Tasks.Where(t => t.Status == Status.COMPLETE).Count();
         }
     }
 

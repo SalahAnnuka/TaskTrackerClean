@@ -110,21 +110,6 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
     }
 
 
-    public async Task<bool> ExistsAsync(int id)
-    {
-        return await _dbSet.AnyAsync(e => !e.IsDeleted && e.Id == id);
-    }
-
-    public async Task<int> CountAsync(Expression<Func<TEntity, bool>>? predicate = null)
-    {
-        var query = _dbSet.Where(e => !e.IsDeleted);
-        if (predicate != null)
-        {
-            query = query.Where(predicate);
-        }
-        return await query.CountAsync();
-    }
-
     public async Task<TEntity> RecoverAsync(int id)
     {
         var entity = await _dbSet.FindAsync(id) ?? throw new KeyNotFoundException($"Couldn't find item with id {id}");

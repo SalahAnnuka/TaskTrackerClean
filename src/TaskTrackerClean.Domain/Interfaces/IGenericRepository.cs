@@ -14,8 +14,7 @@ public interface IGenericRepository<TEntity> where TEntity : class
         int pageSize,
         Expression<Func<TEntity, bool>>? predicate = null,
         params Expression<Func<TEntity, object>>[] includes);
-    Task<bool> ExistsAsync(int id);
-    Task<int> CountAsync(Expression<Func<TEntity, bool>>? predicate = null);
+
     Task<TEntity> RecoverAsync(int id);
 }
 
