@@ -27,11 +27,6 @@ artifacts/
 *.dbmdl
 *.db
 
-# ASP.NET Core secrets
-**/appsettings.Development.json
-**/appsettings.Local.json
-**/appsettings.*.json
-
 ## Publish output
 *.publish/
 *.zip
