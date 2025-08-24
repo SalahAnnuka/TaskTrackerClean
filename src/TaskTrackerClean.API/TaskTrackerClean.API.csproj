@@ -5,6 +5,13 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+
+    
+  <Target Name="CreateLogsDirectory" BeforeTargets="Build">
+    <!-- Create the Logs directory if it doesn't exist -->
+    <MakeDir Directories="Logs" />
+  </Target>
 	
 	
   <ItemGroup>
