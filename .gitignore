@@ -27,6 +27,10 @@ artifacts/
 *.dbmdl
 *.db
 
+## Program Development Logs
+src/TaskTrackerClean.API/Logs/*
+
+
 ## Publish output
 *.publish/
 *.zip
