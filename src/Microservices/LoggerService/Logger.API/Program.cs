@@ -1,6 +1,16 @@
+using Logger.Domain.Data;
+using Logger.Application.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+ 
+
+
 // Add services to the container.
+builder.Services.AddScoped<MongoDbService>();
+builder.Services.AddScoped<ExceptionLoggerService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
