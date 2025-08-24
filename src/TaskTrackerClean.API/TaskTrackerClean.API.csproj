@@ -5,7 +5,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
+	
+	
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.8" />
@@ -28,6 +29,10 @@
   <ItemGroup>
     <ProjectReference Include="..\TaskTrackerClean.Application\TaskTrackerClean.Application.csproj" />
     <ProjectReference Include="..\TaskTrackerClean.Infrastructure\TaskTrackerClean.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
   </ItemGroup>
 
 </Project>
