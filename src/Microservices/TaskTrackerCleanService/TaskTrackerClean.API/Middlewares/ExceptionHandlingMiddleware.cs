@@ -11,15 +11,18 @@
         private readonly RequestDelegate _next;
         private readonly ProblemDetailsFactory _problemDetailsFactory;
         private readonly ILogger<ExceptionHandlingMiddleware> _logger;
+        private readonly RabbitMQProducer _rabbitMQProducer;
 
         public ExceptionHandlingMiddleware(
             RequestDelegate next,
             ProblemDetailsFactory problemDetailsFactory,
-            ILogger<ExceptionHandlingMiddleware> logger)
+            ILogger<ExceptionHandlingMiddleware> logger,
+            RabbitMQProducer rabbitMQProducer)
         {
             _next = next;
             _problemDetailsFactory = problemDetailsFactory;
             _logger = logger;
+            _rabbitMQProducer = rabbitMQProducer;
         }
 
         public async Task Invoke(HttpContext context)
@@ -42,7 +45,7 @@
                     TraceId = context.TraceIdentifier,
                 };
 
-                // _rabbitMQProducer.PublishLogMessage(logEntry, "exception_logs");
+                await _rabbitMQProducer.PublishLog(logEntry, "");
 
                 var statusCode = ex switch
                 {
@@ -61,7 +64,6 @@
                 );
 
                 problemDetails.Extensions["traceId"] = context.TraceIdentifier;
-
                 context.Response.StatusCode = problemDetails.Status ?? (int)HttpStatusCode.InternalServerError;
                 context.Response.ContentType = "application/problem+json";
 
@@ -75,5 +77,4 @@
             }
         }
     }
-
 }

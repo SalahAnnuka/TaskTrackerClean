@@ -36,6 +36,8 @@ builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
 
+builder.Services.AddSingleton<RabbitMQProducer>();
+
 
 var app = builder.Build();
 
