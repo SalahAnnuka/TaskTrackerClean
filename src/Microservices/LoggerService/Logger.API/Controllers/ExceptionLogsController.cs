@@ -2,6 +2,7 @@ using Logger.Application.Services;
 using Logger.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
+using Logger.Application.Dtos;
 using System.Threading.Tasks;
 
 namespace Logger.API.Controllers
@@ -18,19 +19,19 @@ namespace Logger.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] ExceptionLogEntity logEntry)
+        public async Task<IActionResult> Post([FromBody] ExceptionLogDto logDto)
         {
 
             try
             {
-                if (logEntry == null)
+                if (logDto == null)
                 {
                     return BadRequest("Log entry is required.");
                 }
 
-                await _loggerService.LogExceptionAsync(logEntry.Level, logEntry.Message, logEntry.Exception, logEntry.TraceId);
+                await _loggerService.LogExceptionAsync(logDto);
 
-                return CreatedAtAction(nameof(GetById), new { id = logEntry.Id }, logEntry);
+                return CreatedAtAction(nameof(GetByTraceId), new { id = logDto.TraceId }, logDto);
             }
             catch (Exception ex)
             {
@@ -72,7 +73,7 @@ namespace Logger.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(string id)
+        public async Task<IActionResult> GetByTraceId(string id)
         {
             try
             {

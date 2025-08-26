@@ -13,6 +13,9 @@ namespace Logger.Domain.Entities
         [BsonElement("timestamp")]
         public DateTime Timestamp { get; set; }
 
+        [BsonElement("service")]
+        public string? Service { get; set; }
+
         [BsonElement("level")]
         public string? Level { get; set; }
 
