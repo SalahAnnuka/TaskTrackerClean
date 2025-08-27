@@ -1,11 +1,6 @@
 ﻿using Common.Contracts.Dtos;
 using MassTransit;
-using MassTransit.Logging;
-using MassTransit.Transports;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Microsoft.Extensions.Options;
 using System.Net;
 using System.Text.Json;
 
@@ -72,14 +67,14 @@ namespace TaskTrackerClean.API.Middlewares
                     };
 
                     await publishEndpoint.Publish(logMessage, context.RequestAborted);
-                    Console.WriteLine("\n\nLog has been published successfully.");
+                    Console.WriteLine("\nLog has been published successfully.\n\n");
 
 
                 }
 
                 catch (Exception publishEx)
                 {
-                    _logger.LogError(publishEx, "Failed to publish exception log message");
+                    _logger.LogError(publishEx, "Failed to publish exception log message\n\n");
                 }
 
 

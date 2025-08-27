@@ -1,10 +1,8 @@
+using Common.Contracts.Dtos;
 using Logger.Application.Services;
 using Logger.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Driver;
-using Logger.Application.Dtos;
-using System.Threading.Tasks;
-using Common.Contracts.Dtos;
 
 namespace Logger.API.Controllers
 {

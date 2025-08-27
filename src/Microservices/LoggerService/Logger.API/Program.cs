@@ -1,4 +1,3 @@
-using Common.Contracts.Dtos;
 using Logger.API.Features;
 using Logger.Application.Services;
 using Logger.Domain.Data;
