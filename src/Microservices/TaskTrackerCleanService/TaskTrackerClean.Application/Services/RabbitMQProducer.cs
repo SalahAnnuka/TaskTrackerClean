@@ -41,9 +41,8 @@ namespace TaskTrackerClean.Application.Services
                 type: ExchangeType.Fanout,
                 durable: true);
 
-            // Add this to ensure queue exists and is bound:
             await _channel.QueueDeclareAsync(
-                queue: "exception-logs-queue", // Use consistent queue name
+                queue: "exception-logs-queue",
                 durable: true,
                 exclusive: false,
                 autoDelete: false);
@@ -61,10 +60,17 @@ namespace TaskTrackerClean.Application.Services
             var json = JsonSerializer.Serialize(body);
             var bodyBytes = Encoding.UTF8.GetBytes(json);
 
-            await _channel.BasicPublishAsync(
-                exchange: "logs",
-                routingKey: routingKey,  // ← Use the routing key!
-                body: bodyBytes);
+            Console.WriteLine($"Publishing to exchange: logs, routingKey: {routingKey}");
+            Console.WriteLine($"Message: {json}");
+            Console.WriteLine($"Connection is open: {_connection?.IsOpen}");
+            Console.WriteLine($"Channel is open: {_channel?.IsOpen}");
+
+            if (_channel != null)
+                await _channel.BasicPublishAsync(
+                    exchange: "logs",
+                    routingKey: routingKey,
+                    body: bodyBytes,
+                    mandatory: false);
         }
 
         public void Dispose()

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using MassTransit;
 using TaskTrackerClean.API.Middlewares;
 using TaskTrackerClean.Application.Interfaces;
 using TaskTrackerClean.Application.Services;
@@ -14,6 +15,16 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host(new Uri(builder.Configuration["MessageBroker:Uri"]!));
+        cfg.ConfigureEndpoints(context);
+    });
+});
+
 
 
 builder.Host.UseSerilog();

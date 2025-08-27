@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.Contracts\Common.Contracts.csproj" />
     <ProjectReference Include="..\Logger.Application\Logger.Application.csproj" />
     <ProjectReference Include="..\Logger.Domain\Logger.Domain.csproj" />
   </ItemGroup>

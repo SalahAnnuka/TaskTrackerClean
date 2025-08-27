@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTrackerClean.Applicatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTrackerClean.Infrastructure", "src\Microservices\TaskTrackerCleanService\TaskTrackerClean.Infrastructure\TaskTrackerClean.Infrastructure.csproj", "{DCF75B83-C22D-45D6-8667-6C20479CF4C2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TaskTrackerCleanService", "TaskTrackerCleanService", "{1AC627B2-94D4-4E4F-8DBB-D816B56AF37D}"
 EndProject
@@ -24,6 +24,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger.Domain", "src\Microservices\LoggerService\Logger.Domain\Logger.Domain.csproj", "{9908A0C3-2888-4B68-898D-D00030F2A5DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger.Application", "src\Microservices\LoggerService\Logger.Application\Logger.Application.csproj", "{89C98BBF-61BD-4F12-8D28-130F017BAF78}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{80149373-4C7A-4BD7-9F17-57AC15BF01DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Contracts", "src\Microservices\Common\Common.Contracts\Common.Contracts.csproj", "{5FBD93E8-976B-4B8C-BB5E-25675664D75E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +63,10 @@ Global
 		{89C98BBF-61BD-4F12-8D28-130F017BAF78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89C98BBF-61BD-4F12-8D28-130F017BAF78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89C98BBF-61BD-4F12-8D28-130F017BAF78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FBD93E8-976B-4B8C-BB5E-25675664D75E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FBD93E8-976B-4B8C-BB5E-25675664D75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FBD93E8-976B-4B8C-BB5E-25675664D75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FBD93E8-976B-4B8C-BB5E-25675664D75E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +82,8 @@ Global
 		{C7A3E44F-90B2-4936-B551-ADA8BC8B50A9} = {8A535B7B-A169-45B8-BB5E-C02CE0ACB8B5}
 		{9908A0C3-2888-4B68-898D-D00030F2A5DE} = {8A535B7B-A169-45B8-BB5E-C02CE0ACB8B5}
 		{89C98BBF-61BD-4F12-8D28-130F017BAF78} = {8A535B7B-A169-45B8-BB5E-C02CE0ACB8B5}
+		{80149373-4C7A-4BD7-9F17-57AC15BF01DC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5FBD93E8-976B-4B8C-BB5E-25675664D75E} = {80149373-4C7A-4BD7-9F17-57AC15BF01DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1CEBF56A-E67A-430B-894D-2C885B2F6CE7}

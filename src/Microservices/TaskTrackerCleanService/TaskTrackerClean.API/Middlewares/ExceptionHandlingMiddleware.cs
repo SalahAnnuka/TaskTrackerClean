@@ -1,28 +1,30 @@
-﻿namespace TaskTrackerClean.API.Middlewares
-{
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.AspNetCore.Mvc.Infrastructure;
-    using System.Net;
-    using System.Text.Json;
-    using TaskTrackerClean.Application.Services;
+﻿using Common.Contracts.Dtos;
+using MassTransit;
+using MassTransit.Logging;
+using MassTransit.Transports;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.Extensions.Options;
+using System.Net;
+using System.Text.Json;
 
+namespace TaskTrackerClean.API.Middlewares
+{
     public class ExceptionHandlingMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly ProblemDetailsFactory _problemDetailsFactory;
         private readonly ILogger<ExceptionHandlingMiddleware> _logger;
-        private readonly RabbitMQProducer _rabbitMQProducer;
+        private readonly ProblemDetailsFactory _problemDetailsFactory;
 
         public ExceptionHandlingMiddleware(
             RequestDelegate next,
             ProblemDetailsFactory problemDetailsFactory,
-            ILogger<ExceptionHandlingMiddleware> logger,
-            RabbitMQProducer rabbitMQProducer)
+            ILogger<ExceptionHandlingMiddleware> logger)
         {
             _next = next;
             _problemDetailsFactory = problemDetailsFactory;
             _logger = logger;
-            _rabbitMQProducer = rabbitMQProducer;
         }
 
         public async Task Invoke(HttpContext context)
@@ -33,19 +35,7 @@
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"An error has occurred. \ntraceId: {context.TraceIdentifier} \n");
-
-                var logEntry = new
-                {
-                    Service = "TaskTrackerService",
-                    Timestamp = DateTime.UtcNow,
-                    Level = "Error",
-                    Message = ex.Message,
-                    Exception = ex.ToString(),
-                    TraceId = context.TraceIdentifier,
-                };
-
-                await _rabbitMQProducer.PublishLog(logEntry, "");
+                _logger.LogError(ex, $"An error has occurred. \ntraceId: {context.TraceIdentifier} \n\n");
 
                 var statusCode = ex switch
                 {
@@ -67,12 +57,33 @@
                 context.Response.StatusCode = problemDetails.Status ?? (int)HttpStatusCode.InternalServerError;
                 context.Response.ContentType = "application/problem+json";
 
-                var options = new JsonSerializerOptions
+                try
                 {
-                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-                };
+                    var publishEndpoint = context.RequestServices.GetRequiredService<IPublishEndpoint>();
 
-                var json = JsonSerializer.Serialize(problemDetails, options);
+                    var logMessage = new ExceptionLogMessage
+                    {
+                        Message = ex.Message,
+                        Service = "TaskTrackerService",
+                        TraceId = context.TraceIdentifier,
+                        Level = "Error",
+                        Exception = ex.ToString(),
+                        Timestamp = DateTime.UtcNow
+                    };
+
+                    await publishEndpoint.Publish(logMessage, context.RequestAborted);
+                    Console.WriteLine("\n\nLog has been published successfully.");
+
+
+                }
+
+                catch (Exception publishEx)
+                {
+                    _logger.LogError(publishEx, "Failed to publish exception log message");
+                }
+
+
+                var json = JsonSerializer.Serialize(problemDetails);
                 await context.Response.WriteAsync(json);
             }
         }

@@ -1,14 +1,24 @@
-using Logger.Domain.Data;
+using Common.Contracts.Dtos;
+using Logger.API.Features;
 using Logger.Application.Services;
+using Logger.Domain.Data;
+using MassTransit;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
- 
 
+builder.Services.AddMassTransit(x =>
+{
+    x.AddConsumer<ExceptionLogConsumer>();
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host(new Uri(builder.Configuration["MessageBroker:Uri"]!));
+        cfg.ConfigureEndpoints(context);
+    });
+});
 
-// Add services to the container.
 builder.Services.AddScoped<MongoDbService>();
 builder.Services.AddScoped<ExceptionLoggerService>();
 

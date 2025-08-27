@@ -1,7 +1,8 @@
 ﻿using Logger.Domain.Data;
 using Logger.Domain.Entities;
 using MongoDB.Driver;
-using Logger.Application.Dtos;
+using Common.Contracts.Dtos;
+
 
 namespace Logger.Application.Services
 {
@@ -47,18 +48,18 @@ namespace Logger.Application.Services
             }
         }
 
-        public async Task LogExceptionAsync(ExceptionLogDto logDto )
+        public async Task LogExceptionAsync(ExceptionLogMessage message)
         {
             try
             {
                 var logEntry = new ExceptionLogEntity
                 {
-                    Timestamp = logDto.Timestamp ?? DateTime.UtcNow,
-                    Service = logDto.Service,
-                    Level = logDto.Level,
-                    Message = logDto.Message,
-                    Exception = logDto.Exception,
-                    TraceId = logDto.TraceId
+                    Timestamp = message.Timestamp ?? DateTime.UtcNow,
+                    Service = message.Service,
+                    Level = message.Level,
+                    Message = message.Message,
+                    Exception = message.Exception,
+                    TraceId = message.TraceId
                 };
 
                 await _mongoDbService.ExceptionLogs.InsertOneAsync(logEntry);

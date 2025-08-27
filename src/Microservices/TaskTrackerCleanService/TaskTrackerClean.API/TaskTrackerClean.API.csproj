@@ -37,6 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.Contracts\Common.Contracts.csproj" />
     <ProjectReference Include="..\TaskTrackerClean.Application\TaskTrackerClean.Application.csproj" />
     <ProjectReference Include="..\TaskTrackerClean.Infrastructure\TaskTrackerClean.Infrastructure.csproj" />
   </ItemGroup>
