@@ -30,14 +30,14 @@ public class ProjectsController : ControllerBase
     {
         var updatedBy = "system";
         var result = await _projectService.UpdateAsync(dto, updatedBy);
-        return Ok(result);
+        return result != null ? Ok(result) : NotFound($"Project with ID {dto.Id} not found");
     }
 
     [HttpGet("{id}")]
     public async Task<ActionResult<ProjectResponseDto>> GetById(int id)
     {
         var result = await _projectService.FindByIdAsync(id);
-        return Ok(result);
+        return result != null ? Ok(result) : NotFound($"Project with ID {id} not found");
     }
 
     [HttpGet]
@@ -52,9 +52,8 @@ public class ProjectsController : ControllerBase
     [HttpPost("{projectId}/tasks/{taskId}")]
     public async Task<ActionResult<ProjectResponseDto>> AddTask(int projectId, int taskId)
     {
-
         var updated = await _projectService.AddTask(projectId, taskId);
-        return Ok(updated);
+        return updated != null ? Ok(updated) : NotFound("Either project or task does not exist");
     }
 
 
@@ -63,8 +62,7 @@ public class ProjectsController : ControllerBase
     {
 
         var updated = await _projectService.RemoveTask(projectId, taskId);
-        return Ok(updated);
-    
+        return updated != null ? Ok(updated) : NotFound("Either project or task does not exist");
 
     }
 
@@ -72,9 +70,8 @@ public class ProjectsController : ControllerBase
     [HttpPost("{projectId}/users/{userId}")]
     public async Task<ActionResult<ProjectResponseDto>> AddUser(int projectId, int userId)
     {
-
         var updated = await _projectService.AddUser(projectId, userId);
-        return Ok(updated);
+        return updated != null ? Ok(updated) : NotFound("Either project or user does not exist");
     }
 
 
@@ -83,7 +80,7 @@ public class ProjectsController : ControllerBase
     {
 
         var updated = await _projectService.RemoveUser(projectId, userId);
-        return Ok(updated);
+        return updated != null? Ok(updated): NotFound("Either project or user does not exist");
     }
 
     [HttpDelete("{id}")]

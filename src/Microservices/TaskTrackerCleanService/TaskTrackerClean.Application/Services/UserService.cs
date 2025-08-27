@@ -35,6 +35,7 @@ public class UserService : IUserService
     public async Task<UserResponseDto> UpdateAsync(UpdateUserDto dto, string updatedBy)
     {
         var existing = await _userRepository.FindByIdAsync(dto.Id);
+        if (existing == null) return null!;
 
         existing.Username = dto.Username ?? existing.Username;
         existing.Email = dto.Email ?? existing.Email;
@@ -47,7 +48,11 @@ public class UserService : IUserService
 
     public async Task<UserResponseDto> FindByIdAsync(int id)
     {
-        var entity = await _userRepository.FindByIdAsync(id);
+        var entity = await _userRepository.FindByIdAsync(id,
+            u => u.Tasks);
+
+        if (entity == null) return null!;
+
         return entity.ToResponseDto();
     }
 
@@ -71,24 +76,32 @@ public class UserService : IUserService
     public async Task<UserResponseDto> DeleteAsync(int id)
     {
         var entity = await _userRepository.DeleteAsync(id);
+        if (entity == null) return null!;
+
         return entity.ToResponseDto();
     }
 
     public async Task<UserResponseDto> AddTaskToUser(int userId, int taskId)
     {
         var entity = await _userRepository.AddTaskToUserAsync(userId, taskId);
+        if (entity == null) return null!;
+
         return entity.ToResponseDto();
     }
 
     public async Task<UserResponseDto> RemoveTaskFromUser(int userId, int taskId)
     {
         var entity = await _userRepository.RemoveTaskFromUserAsync(userId, taskId);
+        if (entity == null) return null!;
+
         return entity.ToResponseDto();
     }
 
     public async Task<UserResponseDto> RecoverAsync(int id)
     {
         var entity = await _userRepository.RecoverAsync(id);
+        if (entity == null) return null!;
+
         return entity.ToResponseDto();
     }
 }

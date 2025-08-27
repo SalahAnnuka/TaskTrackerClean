@@ -63,6 +63,7 @@ public class TaskService : ITaskService
     public async Task<TaskResponseDto> FindByIdAsync(int id)
     {
         var entity = await _taskRepository.FindByIdAsync(id);
+        if (entity == null) return null!;
         return entity.ToResponseDto();
     }
 
@@ -91,24 +92,30 @@ public class TaskService : ITaskService
     public async Task<TaskResponseDto> DeleteAsync(int id)
     {
         var entity = await _taskRepository.DeleteAsync(id);
+        if (entity == null) return null!;
+
         return entity.ToResponseDto();
     }
 
     public async Task<TaskResponseDto> RecoverAsync(int id)
     {
         var entity = await _taskRepository.RecoverAsync(id);
+        if (entity == null) return null!;
+
         return entity.ToResponseDto();
     }
 
     public async Task<IEnumerable<TaskResponseDto>> FindOverdueAsync(int? userId, int? projectId)
     {
         var entities = await _taskRepository.FindOverdueAsync(userId, projectId);
-        return entities.Select(e => e.ToResponseDto());
+        return entities.Select(e => e.ToResponseDto()); //todo: make paginated
     }
 
     public async Task<TaskResponseDto> SetCompleteAsync(int id)
     {
         var entity = await _taskRepository.SetCompleteAsync(id);
+        if (entity == null) return null!;
+
         return entity.ToResponseDto();
     }
 }

@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using TaskTrackerClean.Domain.Entities;
 using TaskTrackerClean.Domain.Interfaces;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace TaskTrackerClean.Infrastructure.Repositories;
 
@@ -19,10 +20,6 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
 
     public async Task<TEntity> CreateAsync(TEntity entity)
     {
-        if (await _dbSet.FindAsync(entity.Id) != null)
-        {
-            throw new InvalidOperationException($"Item with id of {entity.Id} already exists");
-        }
         entity.CreatedAt = DateTime.UtcNow;
         entity.UpdatedAt = DateTime.UtcNow;
         await _dbSet.AddAsync(entity);
@@ -40,7 +37,8 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
 
     public async Task<TEntity> DeleteAsync(int id)
     {
-        var entity = await _dbSet.FindAsync(id) ?? throw new KeyNotFoundException($"Couldn't find item with id {id}");
+        var entity = await _dbSet.FindAsync(id);
+        if (entity == null) return null!;
 
         entity.IsDeleted = true;
         entity.UpdatedAt = DateTime.UtcNow;
@@ -49,12 +47,23 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
         return entity!;
     }
 
-    public async Task<TEntity> FindByIdAsync(int id)
+    public async Task<TEntity> FindByIdAsync(
+        int id,
+        params Expression<Func<TEntity, object>>?[] includes)
     {
-        var result = await _dbSet.Where(e => !e.IsDeleted && e.Id == id).FirstOrDefaultAsync();
-        if (result == null)
-            throw new KeyNotFoundException($"item with id of {id} is not found");
-        return result;
+        var query = _dbSet.Where(e => !e.IsDeleted && e.Id == id);
+        if (includes != null)
+        {
+            foreach (var include in includes)
+            {
+                if (include != null)
+                    query = query.Include(include);
+            }
+        }
+
+        var result = await query.FirstOrDefaultAsync();
+
+        return result!;
     }
 
     public async Task<IEnumerable<TEntity>> FindAsync(Expression<Func<TEntity, bool>>? predicate = null)
@@ -112,7 +121,8 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
 
     public async Task<TEntity> RecoverAsync(int id)
     {
-        var entity = await _dbSet.FindAsync(id) ?? throw new KeyNotFoundException($"Couldn't find item with id {id}");
+        var entity = await _dbSet.FindAsync(id);
+        if (entity == null) return null!;
 
         entity.IsDeleted = false;
         entity.UpdatedAt = DateTime.UtcNow;

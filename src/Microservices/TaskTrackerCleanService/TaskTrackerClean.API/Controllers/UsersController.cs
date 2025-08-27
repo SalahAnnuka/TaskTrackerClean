@@ -28,7 +28,7 @@ public class UsersController : ControllerBase
     {
         var updatedBy = "system";
         var result = await _userService.UpdateAsync(dto, updatedBy);
-        return Ok(result);
+        return result != null ? Ok(result) : NotFound($"User with ID {dto.Id} not found");
     }
 
     [HttpGet("{id}")]

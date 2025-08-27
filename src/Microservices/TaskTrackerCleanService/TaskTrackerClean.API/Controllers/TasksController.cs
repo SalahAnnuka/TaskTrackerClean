@@ -31,8 +31,7 @@ public class TasksController : ControllerBase
     {
         var updatedBy = "system";
         var result = await _taskService.UpdateAsync(dto, updatedBy);
-        return Ok(result);
-
+        return result != null ? Ok(result) : NotFound($"Task with ID {dto.Id} not found");
     }
 
     [HttpGet("{id}")]
@@ -60,7 +59,7 @@ public class TasksController : ControllerBase
     public async Task<ActionResult<TaskResponseDto>> SetComplete(int id)
     {
         var result = await _taskService.SetCompleteAsync(id);
-        return Ok(result);
+        return result != null ? Ok(result) : NotFound($"Task with ID {id} not found");
     }
 
 

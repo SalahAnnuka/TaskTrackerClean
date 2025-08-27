@@ -26,6 +26,7 @@ public class ProjectService : IProjectService
         {
             throw new InvalidOperationException("Project with this title already exists");
         }
+
         var entity = dto.ToEntity(createdBy);
         var createdEntity = await _projectRepository.CreateAsync(entity);
         return createdEntity.ToResponseDto();
@@ -34,6 +35,12 @@ public class ProjectService : IProjectService
     public async Task<ProjectResponseDto> UpdateAsync(UpdateProjectDto dto, string updatedBy)
     {
         var existing = await _projectRepository.FindByIdAsync(dto.Id);
+
+        if (existing == null)
+        {
+            return null!;
+        }
+
         existing.Title = dto.Title ?? existing.Title;
         existing.Description = dto.Description ?? existing.Description;
         existing.UpdatedBy = updatedBy;
@@ -44,7 +51,13 @@ public class ProjectService : IProjectService
 
     public async Task<ProjectResponseDto> FindByIdAsync(int id)
     {
-        var entity = await _projectRepository.FindByIdAsync(id);
+        var entity = await _projectRepository.FindByIdAsync(id,
+            p => p.Users,
+            p => p.Tasks);
+
+        if (entity == null)
+            return null!;
+
         return entity.ToResponseDto();
     }
 
@@ -65,14 +78,17 @@ public class ProjectService : IProjectService
 
     public async Task<ProjectResponseDto> AddTask(int projectId, int taskId)
     {
-
         var project = await _projectRepository.AddTaskToProjectAsync(projectId, taskId);
+
+        if (project == null) return null!;
+
         return project.ToResponseDto();
     }
 
     public async Task<ProjectResponseDto> RemoveTask(int projectId, int taskId)
     {
         var project = await _projectRepository.RemoveTaskFromProjectAsync(projectId, taskId);
+        if (project == null) return null!;
 
         return project.ToResponseDto();
     }
@@ -80,24 +96,33 @@ public class ProjectService : IProjectService
     public async Task<ProjectResponseDto> AddUser(int projectId, int userId)
     {
         var project = await _projectRepository.AddUserToProjectAsync(projectId, userId);
+
+        if (project == null) return null!;
+
         return project.ToResponseDto();
     }
 
     public async Task<ProjectResponseDto> RemoveUser(int projectId, int userId)
     {
         var project = await _projectRepository.RemoveUserFromProjectAsync(projectId, userId);
+
+        if (project == null) return null!;
+
         return project.ToResponseDto();
     }
 
     public async Task<ProjectResponseDto> DeleteAsync(int id)
     {
         var entity = await _projectRepository.DeleteAsync(id);
+        if (entity == null) return null!;
+
         return entity.ToResponseDto();
     }
 
     public async Task<ProjectResponseDto> RecoverAsync(int id)
     {
         var entity = await _projectRepository.RecoverAsync(id);
+        if (entity == null) return null!;
         return entity.ToResponseDto();
     }
 }
