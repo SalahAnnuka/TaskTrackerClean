@@ -25,4 +25,8 @@
     <ProjectReference Include="..\TaskTrackerClean.Domain\TaskTrackerClean.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="MigrationSchemas\" />
+  </ItemGroup>
+
 </Project>

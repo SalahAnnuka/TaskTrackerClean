@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TaskTrackerClean.Domain.Entities;
-using TaskTrackerClean.Domain.Interfaces;
 using TaskTrackerClean.Domain.Enums;
+using TaskTrackerClean.Domain.Interfaces;
 namespace TaskTrackerClean.Infrastructure.Repositories;
 
 public class TaskRepository : GenericRepository<TaskEntity>, ITaskRepository

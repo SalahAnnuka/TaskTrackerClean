@@ -1,7 +1,7 @@
-using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using TaskTrackerClean.Domain.Interfaces;
+using System.Linq.Expressions;
 using TaskTrackerClean.Domain.Entities;
+using TaskTrackerClean.Domain.Interfaces;
 
 namespace TaskTrackerClean.Infrastructure.Repositories;
 

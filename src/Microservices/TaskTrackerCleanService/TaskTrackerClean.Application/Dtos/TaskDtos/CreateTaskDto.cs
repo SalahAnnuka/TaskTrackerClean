@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TaskTrackerClean.Domain.Enums;
-
-namespace TaskTrackerClean.Application.Dtos
+﻿namespace TaskTrackerClean.Application.Dtos
 {
     public class CreateTaskDto
     {

@@ -1,11 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TaskTrackerClean.Application.Helpers
+﻿namespace TaskTrackerClean.Application.Helpers
 {
     public static class Paginator
     {

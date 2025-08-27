@@ -1,6 +1,6 @@
-using TaskTrackerClean.Domain.Entities;
-using TaskTrackerClean.Application.Dtos;
 
+using TaskTrackerClean.Application.Dtos;
+using TaskTrackerClean.Domain.Entities;
 
 
 namespace TaskTrackerClean.Application.Mappers
