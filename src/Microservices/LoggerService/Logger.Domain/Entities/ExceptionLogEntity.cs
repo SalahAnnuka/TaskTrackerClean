@@ -25,7 +25,7 @@ namespace Logger.Domain.Entities
         [BsonElement("exception")]
         public string? Exception { get; set; }
 
-        [BsonElement("traceId")]
+        [BsonElement("traceid")]
         public string? TraceId { get; set; }
 
     }

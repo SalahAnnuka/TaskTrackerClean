@@ -39,7 +39,7 @@ namespace Logger.API.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get([FromQuery] string? level, [FromQuery] string? traceId)
+        public async Task<IActionResult> Get([FromQuery] string? level, [FromQuery] string? traceId,[FromQuery] string? service)
         {
             try
             {
@@ -49,6 +49,11 @@ namespace Logger.API.Controllers
                 if (!string.IsNullOrEmpty(level))
                 {
                     filter &= filterBuilder.Eq(log => log.Level, level);
+                }
+
+                if (!string.IsNullOrEmpty(service))
+                {
+                    filter &= filterBuilder.Eq(log => log.Service, service);
                 }
 
                 if (!string.IsNullOrEmpty(traceId))
