@@ -6,6 +6,8 @@ using TaskTrackerClean.Application.Interfaces;
 using TaskTrackerClean.Application.Services;
 using TaskTrackerClean.Domain.Interfaces;
 using TaskTrackerClean.Infrastructure.Repositories;
+using TaskTrackerClean.Domain.Data;
+using Hangfire;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -40,12 +42,27 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     ));
 
 
+builder.Services.AddHangfire(config => {
+    var connection = builder.Configuration.GetConnectionString("HangfireConnection");
+    config.UseSqlServerStorage(connection);
+});
+
+builder.Services.AddHangfireServer();
+
+
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+builder.Services.AddScoped<ITaskReportRepository, TaskReportRepository>();
+
 builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddScoped<TaskReportService>();
+builder.Services.AddScoped<ReportSchedulerService>();
+
+builder.Services.AddScoped<MongoDbService>();
+
 
 
 var app = builder.Build();
