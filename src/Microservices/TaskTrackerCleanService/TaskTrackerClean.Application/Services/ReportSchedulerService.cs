@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Hangfire;
+﻿using Hangfire;
 
 namespace TaskTrackerClean.Application.Services
 {
@@ -18,7 +13,15 @@ namespace TaskTrackerClean.Application.Services
 
         public void ConfigureDailyReportJob()
         {
-            
+            RecurringJob.AddOrUpdate(
+                recurringJobId: "DailyReportJob",
+                methodCall: () => _taskReportService.GenerateDailyReportAsync(),
+                cronExpression: "0 0 * * *",
+                options: new RecurringJobOptions
+                {
+                    TimeZone = TimeZoneInfo.Utc,
+                }
+            );
         }
     }
 
