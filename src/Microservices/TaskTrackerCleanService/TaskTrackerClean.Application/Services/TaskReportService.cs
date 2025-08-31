@@ -22,5 +22,9 @@ namespace TaskTrackerClean.Application.Services
             var report = await _taskReportRepository.CreateReportAsync();
             return report;
         }
+        public async Task<TaskReportEntity?> GetLatestReportAsync() {
+            return await _taskReportRepository.GetLatestReportAsync();
+        }
+
     }
 }

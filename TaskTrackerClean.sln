@@ -33,6 +33,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{801493
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Contracts", "src\Microservices\Common\Common.Contracts\Common.Contracts.csproj", "{5FBD93E8-976B-4B8C-BB5E-25675664D75E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{10C06BCF-C910-4A1A-B9B3-1E5A8A78961D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTrackerCleanService", "tests\TaskTrackerCleanService\TaskTrackerCleanService.csproj", "{BBBDFA82-B6B7-43A0-B49F-12F1FDB9DC2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +75,10 @@ Global
 		{5FBD93E8-976B-4B8C-BB5E-25675664D75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FBD93E8-976B-4B8C-BB5E-25675664D75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FBD93E8-976B-4B8C-BB5E-25675664D75E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBBDFA82-B6B7-43A0-B49F-12F1FDB9DC2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBBDFA82-B6B7-43A0-B49F-12F1FDB9DC2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBBDFA82-B6B7-43A0-B49F-12F1FDB9DC2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBBDFA82-B6B7-43A0-B49F-12F1FDB9DC2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +96,7 @@ Global
 		{89C98BBF-61BD-4F12-8D28-130F017BAF78} = {8A535B7B-A169-45B8-BB5E-C02CE0ACB8B5}
 		{80149373-4C7A-4BD7-9F17-57AC15BF01DC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{5FBD93E8-976B-4B8C-BB5E-25675664D75E} = {80149373-4C7A-4BD7-9F17-57AC15BF01DC}
+		{BBBDFA82-B6B7-43A0-B49F-12F1FDB9DC2A} = {10C06BCF-C910-4A1A-B9B3-1E5A8A78961D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1CEBF56A-E67A-430B-894D-2C885B2F6CE7}
