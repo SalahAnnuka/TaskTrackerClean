@@ -1,14 +1,13 @@
-using Hangfire;
-using Hangfire.SqlServer;
-using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using MassTransit;
 using TaskTrackerClean.API.Middlewares;
 using TaskTrackerClean.Application.Interfaces;
 using TaskTrackerClean.Application.Services;
-using TaskTrackerClean.Domain.Data;
 using TaskTrackerClean.Domain.Interfaces;
 using TaskTrackerClean.Infrastructure.Repositories;
+using TaskTrackerClean.Domain.Data;
+using Hangfire;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -34,6 +33,21 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        b => b.MigrationsAssembly("TaskTrackerClean.Infrastructure")
+    ));
+
+
+builder.Services.AddHangfire(config => {
+    var connection = builder.Configuration.GetConnectionString("HangfireConnection");
+    config.UseSqlServerStorage(connection);
+});
+
+builder.Services.AddHangfireServer();
+
+
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
@@ -45,28 +59,6 @@ builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<TaskReportService>();
 builder.Services.AddScoped<ReportSchedulerService>();
 builder.Services.AddScoped<MongoDbService>();
-
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection"),
-        b => b.MigrationsAssembly("TaskTrackerClean.Infrastructure")
-    ));
-
-
-builder.Services.AddHangfire(configuration => configuration
-    //.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
-    //.UseSimpleAssemblyNameTypeSerializer()
-    //.UseRecommendedSerializerSettings()
-    .UseSqlServerStorage(builder.Configuration.GetConnectionString("HangfireConnection"), new SqlServerStorageOptions
-    {
-        CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
-        SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
-        QueuePollInterval = TimeSpan.Zero,
-        UseRecommendedIsolationLevel = true,
-        DisableGlobalLocks = true
-    }));
-
-builder.Services.AddHangfireServer();
 
 var app = builder.Build();
 

@@ -7,7 +7,7 @@ namespace TaskTrackerClean.Domain.Entities
     {
         [BsonId]
         [BsonElement("_id")]
-        public int id { get; set; }
+        public ObjectId id { get; set; }
 
         [BsonElement("total")]
         public int TotalTasks { get; set; }

@@ -5,18 +5,22 @@ namespace TaskTrackerClean.Application.Services
     public class ReportSchedulerService
     {
         private readonly TaskReportService _taskReportService;
+        private readonly IRecurringJobManager _recurringJobManager;
 
-        public ReportSchedulerService(TaskReportService taskReportService)
+        public ReportSchedulerService(
+            TaskReportService taskReportService,
+            IRecurringJobManager recurringJobManager)
         {
             _taskReportService = taskReportService;
+            _recurringJobManager = recurringJobManager;
         }
 
         public void ConfigureDailyReportJob()
         {
-            RecurringJob.AddOrUpdate(
+            _recurringJobManager.AddOrUpdate(
                 recurringJobId: "DailyReportJob",
                 methodCall: () => _taskReportService.GenerateDailyReportAsync(),
-                cronExpression: "0 0 * * *",
+                cronExpression: "* * * * *",
                 options: new RecurringJobOptions
                 {
                     TimeZone = TimeZoneInfo.Utc,
@@ -24,5 +28,4 @@ namespace TaskTrackerClean.Application.Services
             );
         }
     }
-
 }
