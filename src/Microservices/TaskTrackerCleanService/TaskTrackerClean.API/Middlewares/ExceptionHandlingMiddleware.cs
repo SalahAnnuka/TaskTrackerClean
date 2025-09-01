@@ -30,7 +30,7 @@ namespace TaskTrackerClean.API.Middlewares
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"An error has occurred. \ntraceId: {context.TraceIdentifier} \n\n");
+                _logger.LogError(ex, $"An error has occurred. \ntraceId: {context.TraceIdentifier} \n");
 
                 var statusCode = ex switch
                 {

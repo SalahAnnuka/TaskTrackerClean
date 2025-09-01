@@ -8,12 +8,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
+var rabbitUri = new UriBuilder
+{
+    Scheme = builder.Configuration["DatabaseSettings:RabbitMQ:Protocol"],
+    Host = builder.Configuration["DatabaseSettings:RabbitMQ:Host"],
+    Port = int.Parse(builder.Configuration["DatabaseSettings:RabbitMQ:Port"]!),
+    UserName = builder.Configuration["DatabaseSettings:RabbitMQ:User"],
+    Password = builder.Configuration["DatabaseSettings:RabbitMQ:Password"],
+    Path = builder.Configuration["DatabaseSettings:RabbitMQ:VirtualHost"]
+}.Uri;
+
 builder.Services.AddMassTransit(x =>
 {
-    x.AddConsumer<ExceptionLogConsumer>();
     x.UsingRabbitMq((context, cfg) =>
     {
-        cfg.Host(new Uri(builder.Configuration["MessageBroker:Uri"]!));
+        cfg.Host(rabbitUri);
         cfg.ConfigureEndpoints(context);
     });
 });

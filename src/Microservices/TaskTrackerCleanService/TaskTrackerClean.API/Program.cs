@@ -1,13 +1,14 @@
+using Hangfire;
+using MassTransit;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using MassTransit;
 using TaskTrackerClean.API.Middlewares;
 using TaskTrackerClean.Application.Interfaces;
 using TaskTrackerClean.Application.Services;
+using TaskTrackerClean.Domain.Data;
 using TaskTrackerClean.Domain.Interfaces;
 using TaskTrackerClean.Infrastructure.Repositories;
-using TaskTrackerClean.Domain.Data;
-using Hangfire;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -18,11 +19,22 @@ Log.Logger = new LoggerConfiguration()
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+var rabbitUri = new UriBuilder
+{
+    Scheme = builder.Configuration["DatabaseSettings:RabbitMQ:Protocol"],
+    Host = builder.Configuration["DatabaseSettings:RabbitMQ:Host"],
+    Port = int.Parse(builder.Configuration["DatabaseSettings:RabbitMQ:Port"]!),
+    UserName = builder.Configuration["DatabaseSettings:RabbitMQ:User"],
+    Password = builder.Configuration["DatabaseSettings:RabbitMQ:Password"],
+    Path = builder.Configuration["DatabaseSettings:RabbitMQ:VirtualHost"]
+}.Uri;
+
 builder.Services.AddMassTransit(x =>
 {
     x.UsingRabbitMq((context, cfg) =>
     {
-        cfg.Host(new Uri(builder.Configuration["MessageBroker:Uri"]!));
+        cfg.Host(rabbitUri);
         cfg.ConfigureEndpoints(context);
     });
 });
@@ -33,16 +45,34 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
+var sqlBuilder = new SqlConnectionStringBuilder
+{
+    DataSource = builder.Configuration["DatabaseSettings:SqlServer:Host"],
+    InitialCatalog = builder.Configuration["DatabaseSettings:SqlServer:Database"],
+    IntegratedSecurity = bool.Parse(builder.Configuration["DatabaseSettings:SqlServer:TrustedConnection"]!)
+};
+
+var sqlConnection = sqlBuilder.ConnectionString;
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection"),
+        sqlConnection,
         b => b.MigrationsAssembly("TaskTrackerClean.Infrastructure")
     ));
 
 
+
 builder.Services.AddHangfire(config => {
-    var connection = builder.Configuration.GetConnectionString("HangfireConnection");
-    config.UseSqlServerStorage(connection);
+    var hangfireBuilder = new SqlConnectionStringBuilder
+    {
+        DataSource = builder.Configuration["DatabaseSettings:Hangfire:Host"],
+        InitialCatalog = builder.Configuration["DatabaseSettings:Hangfire:Database"],
+        IntegratedSecurity = bool.Parse(builder.Configuration["DatabaseSettings:Hangfire:TrustedConnection"]!)
+    };
+    var hangfireConnection = hangfireBuilder.ConnectionString;
+
+    config.UseSqlServerStorage(hangfireConnection);
 });
 
 builder.Services.AddHangfireServer();
