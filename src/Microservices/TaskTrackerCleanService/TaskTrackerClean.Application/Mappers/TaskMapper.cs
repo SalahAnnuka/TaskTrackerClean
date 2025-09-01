@@ -13,7 +13,7 @@ public static class TaskMapper
         {
             Name = dto.Name ?? "Untitled Task",
             Description = dto.Description ?? string.Empty,
-            Priority = dto.PriorityText != null? EnumHelper.GetPriority(dto.PriorityText) : Priority.LOW,
+            Priority = dto.PriorityText != null? EnumHelper.GetPriority(dto.PriorityText) ?? Priority.LOW : Priority.LOW,
             StartDate = dto.StartDate ?? DateTime.UtcNow,
             DueDate = dto.DueDate ?? DateTime.UtcNow.AddDays(3), 
             Status = Status.NEW,

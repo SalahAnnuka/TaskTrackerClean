@@ -48,7 +48,7 @@ public class TaskService : ITaskService
 
         if (!string.IsNullOrEmpty(dto.PriorityText))
         {
-            existing.Priority = dto.PriorityText != null? EnumHelper.GetPriority(dto.PriorityText) : existing.Priority;
+            existing.Priority = dto.PriorityText != null? EnumHelper.GetPriority(dto.PriorityText)?? existing.Priority : existing.Priority;
         }
 
         if (existing.StartDate > existing.DueDate)

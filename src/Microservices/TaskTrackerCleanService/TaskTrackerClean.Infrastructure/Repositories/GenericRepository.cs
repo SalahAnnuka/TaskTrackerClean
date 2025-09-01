@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using TaskTrackerClean.Domain.Entities;
 using TaskTrackerClean.Domain.Interfaces;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace TaskTrackerClean.Infrastructure.Repositories;
 

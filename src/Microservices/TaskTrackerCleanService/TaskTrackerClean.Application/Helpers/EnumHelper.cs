@@ -25,7 +25,7 @@ public static class EnumHelper
         };
     }
 
-    public static Priority GetPriority(string priorityText)
+    public static Priority? GetPriority(string priorityText)
     {
         priorityText = priorityText.ToLower();
         return priorityText switch
@@ -33,11 +33,11 @@ public static class EnumHelper
             "low" => Priority.LOW,
             "medium" => Priority.MEDIUM,
             "high" => Priority.HIGH,
-            _ => throw new ArgumentException("Unknown priority type has been entered")
+            _ => null
         };
     }
 
-    public static Status GetStatus(string statusText)
+    public static Status? GetStatus(string statusText)
     {
         statusText = statusText.ToLower();
         return statusText switch
@@ -45,7 +45,7 @@ public static class EnumHelper
             "new" => Status.NEW,
             "in progress" => Status.IN_PROGRESS,
             "complete" => Status.COMPLETE,
-            _ => throw new ArgumentException("Unknown status type has been entered")
+            _ => null
         };
     }
 
