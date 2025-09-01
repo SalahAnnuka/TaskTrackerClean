@@ -82,3 +82,4 @@ yarn-error.log*
 # VS for Mac
 *.userprefs
 /.vs
+/src/Microservices/TaskTrackerCleanService/TaskTrackerClean.API/Logs/errors20250901.txt
