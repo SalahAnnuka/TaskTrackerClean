@@ -7,6 +7,7 @@ namespace TaskTrackerClean.Domain.Data
     public class MongoDbService
     {
         private readonly IMongoDatabase _database;
+        private readonly string _collectionName;
 
         public MongoDbService(IConfiguration configuration)
         {
@@ -22,8 +23,11 @@ namespace TaskTrackerClean.Domain.Data
             var mongoUrl = mongoBuilder.ToMongoUrl();
             var mongoClient = new MongoClient(mongoUrl);
             _database = mongoClient.GetDatabase(mongoUrl.DatabaseName);
+            _collectionName = configuration["DatabaseSettings:MongoDb:CollectionName"]!;
         }
 
-        public IMongoCollection<TaskReportEntity> TaskReports => _database.GetCollection<TaskReportEntity>("TaskReports");
+
+        public IMongoCollection<TaskReportEntity> TaskReports =>
+                _database.GetCollection<TaskReportEntity>(_collectionName);
     }
 }
