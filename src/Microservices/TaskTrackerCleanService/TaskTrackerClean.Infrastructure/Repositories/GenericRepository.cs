@@ -84,32 +84,13 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
     Expression<Func<TEntity, bool>>? predicate = null,
     params Expression<Func<TEntity, object>>?[] includes)
     {
-        var query = _dbSet.Where(e => !e.IsDeleted);
-
-        if (predicate != null)
-        {
-            query = query.Where(predicate);
-        }
-
-        if (includes != null)
-        {
-            foreach (var include in includes)
-            {
-                if (include != null)
-                    query = query.Include(include);
-            }
-        }
-
-        var sortExpression = SortingHelper.GetSortBy<TEntity>(sortBy);
-        var sortFunc = SortingHelper.GetSortAs(sortAs, sortExpression);
-
-        query = sortFunc(query);
-
-        page = Math.Max(page, 1);
-        pageSize = Math.Clamp(pageSize, 1, 100);
+        var query = PaginationHelper<TEntity>.PrepareQuery(_dbSet, predicate, includes, sortBy, sortAs);
 
         var totalItems = await query.CountAsync();
-        var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+        var totalPages = 0;
+
+        (page, pageSize, totalPages) = PaginationHelper<TEntity>.NormalizePagination(page, pageSize, totalPages, totalItems);
+
 
         if (totalPages > 0 && page > totalPages)
         {
