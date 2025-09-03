@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TaskTrackerClean.Application.Interfaces;
 using TaskTrackerClean.Domain.Entities;
 using TaskTrackerClean.Domain.Interfaces;
 
 namespace TaskTrackerClean.Application.Services
 {
-    public class TaskReportService
+    public class TaskReportService : ITaskReportService
     {
         private readonly ITaskReportRepository _taskReportRepository;
 

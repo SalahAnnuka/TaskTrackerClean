@@ -6,7 +6,7 @@ using Common.Contracts.Dtos;
 
 namespace Logger.Application.Services
 {
-    public class ExceptionLoggerService
+    public class ExceptionLoggerService 
     {
         private readonly MongoDbService _mongoDbService;
 

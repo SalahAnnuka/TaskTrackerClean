@@ -86,7 +86,7 @@ builder.Services.AddScoped<ITaskReportRepository, TaskReportRepository>();
 builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
-builder.Services.AddScoped<TaskReportService>();
+builder.Services.AddScoped<ITaskReportService, TaskReportService>();
 builder.Services.AddScoped<ReportSchedulerService>();
 builder.Services.AddScoped<MongoDbService>();
 
