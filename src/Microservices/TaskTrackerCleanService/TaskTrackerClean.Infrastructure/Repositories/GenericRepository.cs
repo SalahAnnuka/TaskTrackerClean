@@ -77,12 +77,12 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
     }
 
     public async Task<(IEnumerable<TEntity> Items, int TotalPages, int TotalItems)> FindWithIncludesAsync(
-    int page,
-    int pageSize,
-    string? sortBy,
-    string? sortAs,
-    Expression<Func<TEntity, bool>>? predicate = null,
-    params Expression<Func<TEntity, object>>?[] includes)
+        int page,
+        int pageSize,
+        string? sortBy,
+        string? sortAs,
+        Expression<Func<TEntity, bool>>? predicate = null,
+        params Expression<Func<TEntity, object>>?[] includes)
     {
         var query = PaginationHelper<TEntity>.PrepareQuery(_dbSet, predicate, includes, sortBy, sortAs);
 
@@ -91,18 +91,17 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
 
         (page, pageSize, totalPages) = PaginationHelper<TEntity>.NormalizePagination(page, pageSize, totalPages, totalItems);
 
-
-        if (totalPages > 0 && page > totalPages)
-        {
-            throw new KeyNotFoundException($"Page number ({page}) exceeds total pages ({totalPages}) for page size ({pageSize}).");
-        }
-
         var items = await query
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
             .ToListAsync();
 
-        return (items, totalPages, totalItems);
+        return await PaginationHelper<TEntity>.GetPagedResultAsync(
+            query,
+            page,
+            pageSize,
+            totalPages,
+            totalItems);
     }
 
 

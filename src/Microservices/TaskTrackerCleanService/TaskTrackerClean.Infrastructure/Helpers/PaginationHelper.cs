@@ -1,11 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MongoDB.Driver.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 using TaskTrackerClean.Domain.Entities;
 
 namespace TaskTrackerClean.Infrastructure.Helpers
@@ -46,6 +40,13 @@ namespace TaskTrackerClean.Infrastructure.Helpers
             totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
             totalPages = Math.Min(page, totalPages);
             return (page, pageSize, totalPages);
+        }
+
+        public static async Task<(IEnumerable<TEntity> Items, int TotalPages, int TotalItems)> GetPagedResultAsync(IQueryable<TEntity> input, int page, int pageSize, int totalPages, int totalItems) {
+            var result = await input
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize).ToListAsync();
+            return (result, totalPages, totalItems);
         }
 
 
