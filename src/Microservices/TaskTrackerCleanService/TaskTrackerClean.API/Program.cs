@@ -1,8 +1,10 @@
 using Hangfire;
 using MassTransit;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using TaskTrackerClean.API.JobSchedulers;
 using TaskTrackerClean.API.Middlewares;
 using TaskTrackerClean.Application.Interfaces;
 using TaskTrackerClean.Application.Services;
@@ -45,7 +47,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
+////Database Connections
 
 var sqlBuilder = new SqlConnectionStringBuilder
 {
@@ -77,18 +79,23 @@ builder.Services.AddHangfire(config => {
 
 builder.Services.AddHangfireServer();
 
+////DI Registry
 
+//Repos
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<ITaskReportRepository, TaskReportRepository>();
 
+//Services
 builder.Services.AddScoped<ITaskService, TaskService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<ITaskReportService, TaskReportService>();
-builder.Services.AddScoped<ReportSchedulerService>();
 builder.Services.AddScoped<MongoDbService>();
+
+//Job Schedulers
+builder.Services.AddTransient<ReportScheduler>();
 
 var app = builder.Build();
 
@@ -99,12 +106,6 @@ using (var scope = app.Services.CreateScope())
     db.Database.Migrate();
 }
 
-using (var scope = app.Services.CreateScope())
-{
-    var reportSchedulerService = scope.ServiceProvider.GetRequiredService<ReportSchedulerService>();
-    reportSchedulerService.ConfigureDailyReportJob();
-}
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -112,8 +113,13 @@ if (app.Environment.IsDevelopment())
 }
 app.UseHangfireDashboard("/hangfire");
 
-app.UseMiddleware<ExceptionHandlingMiddleware>();
+using (var scope = app.Services.CreateScope())
+{
+    var scheduler = scope.ServiceProvider.GetRequiredService<ReportScheduler>();
+    scheduler.ConfigureDailyReportJob();
+}
 
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseHttpsRedirection();
 app.UseRouting();
 app.MapControllers();

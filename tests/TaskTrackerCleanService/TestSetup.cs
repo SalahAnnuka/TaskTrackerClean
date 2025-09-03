@@ -19,12 +19,13 @@ public class TestSetup
         services.AddTransient<IUserRepository, UserRepository>();
         services.AddTransient<IProjectRepository, ProjectRepository>();
         services.AddTransient<ITaskReportRepository, TaskReportRepository>();
+
         services.AddTransient<ITaskService, TaskService>();
         services.AddTransient<IUserService, UserService>();
         services.AddTransient<IProjectService, ProjectService>();
         services.AddTransient<TaskReportService>();
         services.AddTransient<ReportSchedulerService>();
-
+        //services.AddTransient<TaskTrackerClean.Domain.Data.MongoDbService>();
 
         ServiceProvider = services.BuildServiceProvider();
     }

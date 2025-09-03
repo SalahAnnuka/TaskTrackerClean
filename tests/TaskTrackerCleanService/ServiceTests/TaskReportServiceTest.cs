@@ -1,33 +1,29 @@
-﻿using TaskTrackerClean.Application.Services;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
+using NUnit.Framework;
+using TaskTrackerClean.Application.Services;
 
 namespace TaskTrackerCleanService;
 
 [TestFixture]
 public class TaskReportServiceTest
 {
-    private TaskReportService _mockService;
+    private TaskReportService _service;
 
     [SetUp]
     public void Setup()
     {
-        var services = new ServiceCollection();
 
-        // Register dependencies needed by TaskReportService
-        services.AddTransient<TaskReportService>();
-        // Add other dependencies like repositories, DbContext, etc.
-
-        var provider = services.BuildServiceProvider();
-        _mockService = provider.GetRequiredService<TaskReportService>();
+        // Use the shared ServiceProvider from TestSetup
+        _service = TestSetup.ServiceProvider.GetRequiredService<TaskReportService>();
     }
 
     [Test]
     public async Task Test()
     {
-        var generatedReport = await _mockService.GenerateDailyReportAsync();
+        var generatedReport = await _service.GenerateDailyReportAsync();
         Assert.IsNotNull(generatedReport);
 
-        var latestReport = await _mockService.GetLatestReportAsync();
+        var latestReport = await _service.GetLatestReportAsync();
         Assert.IsNotNull(latestReport);
 
         Assert.AreEqual(generatedReport, latestReport);

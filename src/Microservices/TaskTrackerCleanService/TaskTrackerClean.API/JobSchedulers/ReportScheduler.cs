@@ -1,14 +1,15 @@
 ﻿using Hangfire;
+using TaskTrackerClean.Application.Interfaces;
 
-namespace TaskTrackerClean.Application.Services
+namespace TaskTrackerClean.API.JobSchedulers
 {
-    public class ReportSchedulerService
+    public class ReportScheduler
     {
-        private readonly TaskReportService _taskReportService;
+        private readonly ITaskReportService _taskReportService;
         private readonly IRecurringJobManager _recurringJobManager;
 
-        public ReportSchedulerService(
-            TaskReportService taskReportService,
+        public ReportScheduler(
+            ITaskReportService taskReportService,
             IRecurringJobManager recurringJobManager)
         {
             _taskReportService = taskReportService;
@@ -20,7 +21,7 @@ namespace TaskTrackerClean.Application.Services
             _recurringJobManager.AddOrUpdate(
                 recurringJobId: "DailyReportJob",
                 methodCall: () => _taskReportService.GenerateDailyReportAsync(),
-                cronExpression: "* * * * *",
+                cronExpression: Cron.Minutely,
                 options: new RecurringJobOptions
                 {
                     TimeZone = TimeZoneInfo.Utc,
