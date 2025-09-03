@@ -7,13 +7,11 @@ namespace TaskTrackerClean.Infrastructure.Helpers
     {
         public static Expression<Func<T, object>> GetSortBy<T>(string? sortByText)
         {
-            // Use "Id" as default if input is null/empty
             var propertyName = string.IsNullOrWhiteSpace(sortByText) ? "Id" : sortByText;
 
             var param = Expression.Parameter(typeof(T), "x");
             var property = typeof(T).GetProperty(propertyName, BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
 
-            // If property not found, fallback to "Id"
             if (property == null)
             {
                 property = typeof(T).GetProperty("Id", BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance);
@@ -27,15 +25,15 @@ namespace TaskTrackerClean.Infrastructure.Helpers
             return Expression.Lambda<Func<T, object>>(converted, param);
         }
 
-        public static Func<IQueryable<T>, IOrderedQueryable<T>> GetSortAs<T>(string? sortAsText, Expression<Func<T, object>> sortBy)
+        public static Func<IQueryable<T>, IQueryable<T>> GetSortAs<T>(string? sortAsText, Expression<Func<T, object>> sortBy)
         {
-            var direction = string.IsNullOrWhiteSpace(sortAsText) ? "desc" : sortAsText.ToLower();
+            var direction = string.IsNullOrWhiteSpace(sortAsText) ? "asc" : sortAsText.ToLower();
 
             return direction switch
             {
                 "asc" => query => query.OrderBy(sortBy),
                 "desc" => query => query.OrderByDescending(sortBy),
-                _ => query => query.OrderByDescending(sortBy)
+                _ => query => query.OrderBy(sortBy)
             };
         }
     }

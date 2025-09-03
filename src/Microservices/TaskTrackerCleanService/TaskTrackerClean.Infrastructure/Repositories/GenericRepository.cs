@@ -100,9 +100,9 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
             }
         }
 
-        // Apply sorting using helper
         var sortExpression = SortingHelper.GetSortBy<TEntity>(sortBy);
         var sortFunc = SortingHelper.GetSortAs(sortAs, sortExpression);
+
         query = sortFunc(query);
 
         page = Math.Max(page, 1);
