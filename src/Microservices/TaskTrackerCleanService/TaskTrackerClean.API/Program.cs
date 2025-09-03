@@ -1,6 +1,5 @@
 using Hangfire;
 using MassTransit;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -47,8 +46,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-////Database Connections
+////Database Registry
 
+//App database/fetch connection string
 var sqlBuilder = new SqlConnectionStringBuilder
 {
     DataSource = builder.Configuration["DatabaseSettings:SqlServer:Host"],
@@ -56,6 +56,7 @@ var sqlBuilder = new SqlConnectionStringBuilder
     IntegratedSecurity = bool.Parse(builder.Configuration["DatabaseSettings:SqlServer:TrustedConnection"]!)
 };
 
+//App database/initialize connection
 var sqlConnection = sqlBuilder.ConnectionString;
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(
@@ -63,8 +64,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
         b => b.MigrationsAssembly("TaskTrackerClean.Infrastructure")
     ));
 
-
-
+//Hangfire
 builder.Services.AddHangfire(config => {
     var hangfireBuilder = new SqlConnectionStringBuilder
     {
@@ -97,30 +97,48 @@ builder.Services.AddScoped<MongoDbService>();
 //Job Schedulers
 builder.Services.AddTransient<ReportScheduler>();
 
+//// Apply Registries
 var app = builder.Build();
 
-
+// Run migrations
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.Migrate();
 }
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-app.UseHangfireDashboard("/hangfire");
-
+// Run Schedulers
 using (var scope = app.Services.CreateScope())
 {
     var scheduler = scope.ServiceProvider.GetRequiredService<ReportScheduler>();
     scheduler.ConfigureDailyReportJob();
 }
 
+
+//add dev mode portals
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+    app.UseHangfireDashboard("/hangfire");
+}
+
+//add exception handling middleware (logs errors)
 app.UseMiddleware<ExceptionHandlingMiddleware>();
-app.UseHttpsRedirection();
+
+//reject https requests
+app.Use(async (context, next) =>
+{
+    if (context.Request.IsHttps)
+    {
+        context.Response.StatusCode = StatusCodes.Status400BadRequest;
+        await context.Response.WriteAsync("HTTP required.");
+        return;
+    }
+
+    await next();
+});
+
 app.UseRouting();
 app.MapControllers();
 

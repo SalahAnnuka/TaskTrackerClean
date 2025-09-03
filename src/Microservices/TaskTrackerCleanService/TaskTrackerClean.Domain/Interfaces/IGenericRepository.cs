@@ -16,6 +16,13 @@ public interface IGenericRepository<TEntity> where TEntity : class
         int pageSize,
         Expression<Func<TEntity, bool>>? predicate = null,
         params Expression<Func<TEntity, object>>[] includes);
+    Task<(IEnumerable<TEntity> Items, int TotalPages, int TotalItems)> FindWithIncludesAsync(
+    int page,
+    int pageSize,
+    string? sortBy,
+    string? sortAs,
+    Expression<Func<TEntity, bool>>? predicate = null,
+    params Expression<Func<TEntity, object>>?[] includes);
 
     Task<TEntity> RecoverAsync(int id);
 }

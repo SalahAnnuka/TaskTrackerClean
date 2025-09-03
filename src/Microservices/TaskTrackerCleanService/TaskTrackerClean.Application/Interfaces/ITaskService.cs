@@ -7,7 +7,7 @@ public interface ITaskService
     Task<TaskResponseDto> CreateAsync(CreateTaskDto dto, string createdBy);
     Task<TaskResponseDto> UpdateAsync(UpdateTaskDto dto, string updatedBy);
     Task<TaskResponseDto> FindByIdAsync(int id);
-    Task<object> FindAsync(FindTaskDto dto, int page, int pageSize);
+    Task<object> FindAsync(FindTaskDto dto, int page, int pageSize, string? sortBy, string? sortAs);
     Task<TaskResponseDto> DeleteAsync(int id);
     Task<TaskResponseDto> RecoverAsync(int id);
     Task<IEnumerable<TaskResponseDto>> FindOverdueAsync(int? userId, int? projectId);

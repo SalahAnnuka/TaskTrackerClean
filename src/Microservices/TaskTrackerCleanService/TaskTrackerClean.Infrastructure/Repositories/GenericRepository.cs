@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using TaskTrackerClean.Domain.Entities;
 using TaskTrackerClean.Domain.Interfaces;
+using TaskTrackerClean.Infrastructure.Helpers;
 
 namespace TaskTrackerClean.Infrastructure.Repositories;
 
@@ -76,10 +77,12 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
     }
 
     public async Task<(IEnumerable<TEntity> Items, int TotalPages, int TotalItems)> FindWithIncludesAsync(
-        int page,
-        int pageSize,
-        Expression<Func<TEntity, bool>>? predicate = null,
-        params Expression<Func<TEntity, object>>?[] includes)
+    int page,
+    int pageSize,
+    string? sortBy,
+    string? sortAs,
+    Expression<Func<TEntity, bool>>? predicate = null,
+    params Expression<Func<TEntity, object>>?[] includes)
     {
         var query = _dbSet.Where(e => !e.IsDeleted);
 
@@ -97,11 +100,15 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
             }
         }
 
+        // Apply sorting using helper
+        var sortExpression = SortingHelper.GetSortBy<TEntity>(sortBy);
+        var sortFunc = SortingHelper.GetSortAs(sortAs, sortExpression);
+        query = sortFunc(query);
+
         page = Math.Max(page, 1);
         pageSize = Math.Clamp(pageSize, 1, 100);
 
         var totalItems = await query.CountAsync();
-
         var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
 
         if (totalPages > 0 && page > totalPages)
@@ -128,5 +135,10 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
         await _context.SaveChangesAsync();
 
         return entity!;
+    }
+
+    public Task<(IEnumerable<TEntity> Items, int TotalPages, int TotalItems)> FindWithIncludesAsync(int page, int pageSize, Expression<Func<TEntity, bool>>? predicate = null, params Expression<Func<TEntity, object>>[] includes)
+    {
+        throw new NotImplementedException();
     }
 }

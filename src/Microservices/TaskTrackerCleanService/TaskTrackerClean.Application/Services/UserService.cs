@@ -56,11 +56,13 @@ public class UserService : IUserService
         return entity.ToResponseDto();
     }
 
-    public async Task<object> FindAsync(FindUserDto dto, int page, int pageSize)
+    public async Task<object> FindAsync(FindUserDto dto, int page, int pageSize, string? sortBy, string? sortAs)
     {
         var (users, totalPages, totalItems) = await _userRepository.FindWithIncludesAsync(
             page,
             pageSize,
+            sortBy,
+            sortAs,
             u => (!dto.Id.HasValue || u.Id == dto.Id.Value) &&
                  (string.IsNullOrEmpty(dto.Username) || u.Username.Contains(dto.Username)) &&
                  (string.IsNullOrEmpty(dto.Email) || u.Email.Contains(dto.Email)),
@@ -103,5 +105,10 @@ public class UserService : IUserService
         if (entity == null) return null!;
 
         return entity.ToResponseDto();
+    }
+
+    public Task<object> FindAsync(FindUserDto dto, int page, int pageSize)
+    {
+        throw new NotImplementedException();
     }
 }

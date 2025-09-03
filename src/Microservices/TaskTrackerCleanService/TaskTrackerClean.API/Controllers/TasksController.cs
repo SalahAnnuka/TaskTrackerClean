@@ -42,9 +42,9 @@ public class TasksController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<TaskResponseDto>>> Find([FromQuery] FindTaskDto dto, int? page, int? pageSize)
+    public async Task<ActionResult<IEnumerable<TaskResponseDto>>> Find([FromQuery] FindTaskDto dto, int? page, int? pageSize, string? sortBy, string? sortAs)
     {
-        var results = await _taskService.FindAsync(dto, page ?? 1, pageSize ?? 10);
+        var results = await _taskService.FindAsync(dto, page ?? 1, pageSize ?? 10, sortBy, sortAs);
         return Ok(results);
     }
 

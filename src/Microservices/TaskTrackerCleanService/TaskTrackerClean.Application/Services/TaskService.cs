@@ -67,7 +67,7 @@ public class TaskService : ITaskService
         return entity.ToResponseDto();
     }
 
-    public async Task<object> FindAsync(FindTaskDto dto, int page, int pageSize)
+    public async Task<object> FindAsync(FindTaskDto dto, int page, int pageSize, string? sortBy, string? sortAs)
     {
         Priority? priority = dto.PriorityText != null? EnumHelper.GetPriority(dto.PriorityText) : null;
         Status? status = dto.StatusText != null? EnumHelper.GetStatus(dto.StatusText) : null;
@@ -75,6 +75,8 @@ public class TaskService : ITaskService
         var (items, totalPages, totalItems) = await _taskRepository.FindWithIncludesAsync(
             page,
             pageSize,
+            sortBy,
+            sortAs,
             t => (dto.Id == 0 || t.Id == dto.Id) &&
                  (string.IsNullOrEmpty(dto.Name) || t.Name.Contains(dto.Name)) &&
                  (string.IsNullOrEmpty(dto.Description) || t.Description.Contains(dto.Description)) &&
@@ -117,5 +119,10 @@ public class TaskService : ITaskService
         if (entity == null) return null!;
 
         return entity.ToResponseDto();
+    }
+
+    public Task<object> FindAsync(FindTaskDto dto, int page, int pageSize)
+    {
+        throw new NotImplementedException();
     }
 }
