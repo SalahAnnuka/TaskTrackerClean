@@ -84,24 +84,12 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity>
         Expression<Func<TEntity, bool>>? predicate = null,
         params Expression<Func<TEntity, object>>?[] includes)
     {
-        var query = PaginationHelper<TEntity>.PrepareQuery(_dbSet, predicate, includes, sortBy, sortAs);
-
-        var totalItems = await query.CountAsync();
-        var totalPages = 0;
-
-        (page, pageSize, totalPages) = PaginationHelper<TEntity>.NormalizePagination(page, pageSize, totalPages, totalItems);
-
-        var items = await query
-            .Skip((page - 1) * pageSize)
-            .Take(pageSize)
-            .ToListAsync();
+        var query = PaginationHelper<TEntity>.PrepareQuery(_dbSet, sortBy, sortAs, predicate, includes);
 
         return await PaginationHelper<TEntity>.GetPagedResultAsync(
             query,
             page,
-            pageSize,
-            totalPages,
-            totalItems);
+            pageSize);
     }
 
 
