@@ -27,13 +27,13 @@ public class TaskEntity : BaseEntity<TaskEntity>
     public Priority Priority { get; set; }
 
     [Range(1, 3)]
-    public Status Status { get; set; } = Status.NEW; //once a task is complete it cant be modified (except when deleted, foreign key removed)
+    public Status Status { get; set; } = Status.NEW;
     public DateTime StartDate { get; set; }
     public DateTime DueDate { get; set; }
 
     [NotMapped]
     public int? Duration { get {
-            return Status == Status.COMPLETE?  (DueDate - StartDate).Days : null;
+            return Status == Status.COMPLETE?  (DateTime.UtcNow - StartDate).Days : null;
         }
     }
 
