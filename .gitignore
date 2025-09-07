@@ -83,3 +83,6 @@ yarn-error.log*
 *.userprefs
 /.vs
 /src/Microservices/TaskTrackerCleanService/TaskTrackerClean.API/Logs/errors20250901.txt
+/src/Microservices/LoggerService/Logger.API/appsettings.json
+/src/Microservices/TaskTrackerCleanService/TaskTrackerClean.API/Logs
+/src/Microservices/TaskTrackerCleanService/TaskTrackerClean.API/appsettings.json
