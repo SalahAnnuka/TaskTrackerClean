@@ -1,3 +1,4 @@
+using Common.Contracts.Encryption;
 using Logger.API.Features;
 using Logger.Application.Services;
 using Logger.Domain.Data;
@@ -10,16 +11,17 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
 
 var rabbitUri = new UriBuilder
 {
-    Scheme = builder.Configuration["DatabaseSettings:RabbitMQ:Protocol"],
-    Host = builder.Configuration["DatabaseSettings:RabbitMQ:Host"],
-    Port = int.Parse(builder.Configuration["DatabaseSettings:RabbitMQ:Port"]!),
-    UserName = builder.Configuration["DatabaseSettings:RabbitMQ:User"],
-    Password = builder.Configuration["DatabaseSettings:RabbitMQ:Password"],
-    Path = builder.Configuration["DatabaseSettings:RabbitMQ:VirtualHost"]
+    Scheme = builder.Configuration["MessageBroker:Protocol"],
+    Host = builder.Configuration["MessageBroker:Host"],
+    Port = int.Parse(builder.Configuration["MessageBroker:Port"]!),
+    UserName = builder.Configuration["MessageBroker:User"],
+    Password = builder.Configuration["MessageBroker:Password"],
+    Path = builder.Configuration["MessageBroker:VirtualHost"]
 }.Uri;
 
 builder.Services.AddMassTransit(x =>
 {
+    x.AddConsumer<ExceptionLogConsumer>();
     x.UsingRabbitMq((context, cfg) =>
     {
         cfg.Host(rabbitUri);
@@ -29,6 +31,8 @@ builder.Services.AddMassTransit(x =>
 
 builder.Services.AddScoped<MongoDbService>();
 builder.Services.AddScoped<ExceptionLoggerService>();
+
+builder.Services.AddSingleton<EncryptionHelper>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

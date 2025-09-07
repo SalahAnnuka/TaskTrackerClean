@@ -21,7 +21,7 @@ namespace TaskTrackerClean.API.JobSchedulers
             _recurringJobManager.AddOrUpdate(
                 recurringJobId: "DailyReportJob",
                 methodCall: () => _taskReportService.GenerateDailyReportAsync(),
-                cronExpression: Cron.Minutely,
+                cronExpression: Cron.Yearly,
                 options: new RecurringJobOptions
                 {
                     TimeZone = TimeZoneInfo.Utc,

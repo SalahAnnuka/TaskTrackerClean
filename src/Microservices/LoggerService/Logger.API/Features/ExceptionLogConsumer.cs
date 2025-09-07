@@ -4,7 +4,7 @@ using MassTransit;
 
 namespace Logger.API.Features
 {
-    public class ExceptionLogConsumer : IConsumer<ExceptionLogMessage>
+    public class ExceptionLogConsumer : IConsumer<EncryptedMessage>
     {
         private readonly ExceptionLoggerService _exceptionLoggerService;
 
@@ -13,11 +13,11 @@ namespace Logger.API.Features
             _exceptionLoggerService = exceptionLoggerService;
         }
 
-        public async Task Consume(ConsumeContext<ExceptionLogMessage> context)
+        public async Task Consume(ConsumeContext<EncryptedMessage> context)
         {
             var message = context.Message;
 
-            await _exceptionLoggerService.LogExceptionAsync(message);
+            await _exceptionLoggerService.LogExceptionSecureAsync(message.EncryptedString);
 
         }
     }

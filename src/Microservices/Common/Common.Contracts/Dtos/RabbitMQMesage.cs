@@ -1,5 +1,8 @@
-﻿namespace Common.Contracts.Dtos
+﻿using MassTransit;
+
+namespace Common.Contracts.Dtos
 {
+    [ExcludeFromTopology]
     public class RabbitMQMesage
     {
         public DateTime? Timestamp { get; set; }

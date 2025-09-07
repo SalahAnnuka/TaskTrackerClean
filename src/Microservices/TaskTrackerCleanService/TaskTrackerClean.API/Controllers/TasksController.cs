@@ -1,7 +1,12 @@
+using Common.Contracts.Encryption;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata.Ecma335;
+using System.Text.Json;
+using TaskTrackerClean.API.Security;
 using TaskTrackerClean.Application.Dtos;
     
 using TaskTrackerClean.Application.Interfaces;
+using TaskTrackerClean.Domain.Entities;
 
 
 namespace TaskTrackerClean.API.Controllers;
@@ -12,10 +17,14 @@ namespace TaskTrackerClean.API.Controllers;
 public class TasksController : ControllerBase
 {
     private readonly ITaskService _taskService;
+    private readonly EncryptionHelper _encryptionHelper;
+    private readonly ITaskReportService _taskReportService;
 
-    public TasksController(ITaskService taskService)
+    public TasksController(ITaskService taskService, EncryptionHelper encryptionHelper, ITaskReportService taskReportService)
     {
         _taskService = taskService;
+        _encryptionHelper = encryptionHelper;
+        _taskReportService = taskReportService;
     }
 
     [HttpPost]
@@ -25,6 +34,26 @@ public class TasksController : ControllerBase
         var result = await _taskService.CreateAsync(dto, createdBy);
         return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
     }
+
+    [HttpPost("encrypted")]
+    public async Task<ActionResult<string>> CreateEncrypted([FromBody] CreateTaskDto dto)
+    {
+        var createdBy = "system";
+        var result = await _taskService.CreateAsync(dto, createdBy);
+        var serializedResult = JsonSerializer.Serialize(result);
+        Console.WriteLine(serializedResult);
+        var encryptedResult = SecurityUtil.Encryption("Top Secret");
+        return CreatedAtAction(nameof(GetById), new { id = result.Id }, new { Encrypted = encryptedResult });
+    }
+
+    [HttpPost("decrypted")]
+    public ActionResult<string> GetEncrypted([FromQuery]  string message)
+    {
+        var decryptedResult = _encryptionHelper.Decrypt(message);
+        return Ok(new { Decrypted = decryptedResult });
+    }
+
+
 
     [HttpPut("{id}")]
     public async Task<ActionResult<TaskResponseDto>> Update([FromBody] UpdateTaskDto dto)
@@ -76,5 +105,23 @@ public class TasksController : ControllerBase
     {
         var result = await _taskService.RecoverAsync(id);
         return result != null ? Ok(result) : NotFound($"Task with ID {id} not found");
+    }
+
+    [HttpPost("encrypted/reports")]
+    public async Task<Object> GetLatestReportEncrypted()
+    {
+        var result = await _taskReportService.GetLatestReportAsync();
+        if (result == null)
+            return NotFound("No report to be retrieved");
+        var serializedResult = JsonSerializer.Serialize(result);
+        var encryptedResult = SecurityUtil.Encryption(serializedResult);
+        return Ok(new { encrypted = encryptedResult });
+    }
+
+    [HttpPost("reports")]
+    public async Task<ActionResult<TaskReportEntity>> GetLatestReport()
+    {
+        var result = await _taskReportService.GetLatestReportAsync();
+        return result != null? Ok(result) : NotFound("Latest Report is not out yet...");
     }
 }

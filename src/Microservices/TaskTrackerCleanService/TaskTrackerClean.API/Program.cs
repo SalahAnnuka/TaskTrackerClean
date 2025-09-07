@@ -1,3 +1,4 @@
+using Common.Contracts.Encryption;
 using Hangfire;
 using MassTransit;
 using Microsoft.Data.SqlClient;
@@ -20,15 +21,14 @@ Log.Logger = new LoggerConfiguration()
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 var rabbitUri = new UriBuilder
 {
-    Scheme = builder.Configuration["DatabaseSettings:RabbitMQ:Protocol"],
-    Host = builder.Configuration["DatabaseSettings:RabbitMQ:Host"],
-    Port = int.Parse(builder.Configuration["DatabaseSettings:RabbitMQ:Port"]!),
-    UserName = builder.Configuration["DatabaseSettings:RabbitMQ:User"],
-    Password = builder.Configuration["DatabaseSettings:RabbitMQ:Password"],
-    Path = builder.Configuration["DatabaseSettings:RabbitMQ:VirtualHost"]
+    Scheme = builder.Configuration["MessageBroker:Protocol"],
+    Host = builder.Configuration["MessageBroker:Host"],
+    Port = int.Parse(builder.Configuration["MessageBroker:Port"]!),
+    UserName = builder.Configuration["MessageBroker:User"],
+    Password = builder.Configuration["MessageBroker:Password"],
+    Path = builder.Configuration["MessageBroker:VirtualHost"]
 }.Uri;
 
 builder.Services.AddMassTransit(x =>
@@ -97,6 +97,9 @@ builder.Services.AddScoped<MongoDbService>();
 //Job Schedulers
 builder.Services.AddTransient<ReportScheduler>();
 
+//Configure encryption
+builder.Services.AddSingleton<EncryptionHelper>();
+
 //// Apply Registries
 var app = builder.Build();
 
@@ -106,6 +109,7 @@ using (var scope = app.Services.CreateScope())
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.Migrate();
 }
+
 
 // Run Schedulers
 using (var scope = app.Services.CreateScope())

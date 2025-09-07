@@ -1,6 +1,8 @@
 ﻿using Common.Contracts.Dtos;
+using Common.Contracts.Encryption;
 using MassTransit;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.Extensions.Options;
 using System.Net;
 using System.Text.Json;
 
@@ -11,15 +13,19 @@ namespace TaskTrackerClean.API.Middlewares
         private readonly RequestDelegate _next;
         private readonly ILogger<ExceptionHandlingMiddleware> _logger;
         private readonly ProblemDetailsFactory _problemDetailsFactory;
+        private readonly EncryptionHelper _encryptionHelper;
 
         public ExceptionHandlingMiddleware(
             RequestDelegate next,
             ProblemDetailsFactory problemDetailsFactory,
-            ILogger<ExceptionHandlingMiddleware> logger)
+            ILogger<ExceptionHandlingMiddleware> logger,
+            EncryptionHelper helper
+            )
         {
             _next = next;
             _problemDetailsFactory = problemDetailsFactory;
             _logger = logger;
+            _encryptionHelper = helper;
         }
 
         public async Task Invoke(HttpContext context)
@@ -66,7 +72,17 @@ namespace TaskTrackerClean.API.Middlewares
                         Timestamp = DateTime.UtcNow
                     };
 
-                    await publishEndpoint.Publish(logMessage, context.RequestAborted);
+                    var serializedMessage = JsonSerializer.Serialize(logMessage);
+
+                    var encryptedString = _encryptionHelper.Encrypt(serializedMessage);
+                    var encryptedMessage = new EncryptedMessage
+                    {
+                        Service = "TaskTrackerService",
+                        TraceId = context.TraceIdentifier,
+                        EncryptedString = encryptedString
+                    };
+
+                    await publishEndpoint.Publish(encryptedMessage, context.RequestAborted);
                     Console.WriteLine("\nLog has been published successfully.\n\n");
 
 
