@@ -2,7 +2,6 @@
 using Common.Contracts.Encryption;
 using MassTransit;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Microsoft.Extensions.Options;
 using System.Net;
 using System.Text.Json;
 

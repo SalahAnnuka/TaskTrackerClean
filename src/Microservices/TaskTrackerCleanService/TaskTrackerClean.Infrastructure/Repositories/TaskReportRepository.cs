@@ -21,6 +21,7 @@ namespace TaskTrackerClean.Infrastructure.Repositories
         public async Task<TaskReportEntity> CreateReportAsync()
         {
             var tasks = await _taskRepository.FindAsync();
+
             var totalTasks = tasks.Count();
             var finishedTasks = tasks.Where(t => t.Status == Status.COMPLETE).Count();
 

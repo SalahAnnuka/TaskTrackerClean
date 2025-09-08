@@ -1,6 +1,5 @@
 using Common.Contracts.Encryption;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
 using TaskTrackerClean.API.Security;
 using TaskTrackerClean.Application.Dtos;
@@ -42,7 +41,7 @@ public class TasksController : ControllerBase
         var result = await _taskService.CreateAsync(dto, createdBy);
         var serializedResult = JsonSerializer.Serialize(result);
         Console.WriteLine(serializedResult);
-        var encryptedResult = SecurityUtil.Encryption("Top Secret");
+        var encryptedResult = SecurityUtil.Encryption(serializedResult);
         return CreatedAtAction(nameof(GetById), new { id = result.Id }, new { Encrypted = encryptedResult });
     }
 
@@ -121,7 +120,7 @@ public class TasksController : ControllerBase
     [HttpPost("reports")]
     public async Task<ActionResult<TaskReportEntity>> GetLatestReport()
     {
-        var result = await _taskReportService.GetLatestReportAsync();
+        var result = await _taskReportService.GenerateDailyReportAsync();
         return result != null? Ok(result) : NotFound("Latest Report is not out yet...");
     }
 }

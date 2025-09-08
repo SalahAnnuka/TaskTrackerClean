@@ -61,7 +61,7 @@ public class ProjectService : IProjectService
         return entity.ToResponseDto();
     }
 
-    public async Task<object> FindAsync(FindProjectDto dto, int page, int pageSize, string? sortBy, string? sortAs)
+    public async Task<object> FindAsync(ProjectBriefResponseDto dto, int page, int pageSize, string? sortBy, string? sortAs)
     {
         var (projects, totalPages, totalItems) = await _projectRepository.FindWithIncludesAsync(
             page,
@@ -128,7 +128,7 @@ public class ProjectService : IProjectService
         return entity.ToResponseDto();
     }
 
-    public Task<object> FindAsync(FindProjectDto dto, int page, int pageSize)
+    public Task<object> FindAsync(ProjectBriefResponseDto dto, int page, int pageSize)
     {
         throw new NotImplementedException();
     }

@@ -1,6 +1,6 @@
 ﻿namespace TaskTrackerClean.Application.Dtos
 {
-    public class FindProjectDto
+    public class ProjectBriefResponseDto
     {
         public int? Id { get; set; }
         public string? Title { get; set; }

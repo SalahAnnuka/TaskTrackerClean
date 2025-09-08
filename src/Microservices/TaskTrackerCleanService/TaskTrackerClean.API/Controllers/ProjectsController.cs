@@ -41,7 +41,7 @@ public class ProjectsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<ProjectResponseDto>>> Find([FromQuery] FindProjectDto dto, int? page, int? pageSize, string? sortBy, string? sortAs)
+    public async Task<ActionResult<IEnumerable<ProjectResponseDto>>> Find([FromQuery] ProjectBriefResponseDto dto, int? page, int? pageSize, string? sortBy, string? sortAs)
     {
         var results = await _projectService.FindAsync(dto, page ?? 1, pageSize ?? 10, sortBy, sortAs);
         return Ok(results);
